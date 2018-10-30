@@ -1,3 +1,8 @@
+'''
+    Convert csv file to format:
+    'word1 word2 word3 __label__l1 __label__l2 __label__l3'
+'''
+
 import csv
 
 input_file = "./allsides.csv"
@@ -22,7 +27,4 @@ def main():
         for label in labels:
             f.write("__label__" + label)
 
-
-
-if __name__ == "__main__":
-    main()
+main()
