@@ -8,7 +8,7 @@ import csv
 import sys
 
 file_path = "./data/allsides.csv"
-n_grams = 2
+n_grams = 1
 train_pct = 0.8
 
 
@@ -20,12 +20,15 @@ def main():
     with open(file_path, "r") as f:
         reader = csv.reader(f, delimiter=",")
         for row in reader:
-            if row[2] == "0":
+            if row[2] == "l":
                 docs.append(row[1])
                 labels.append(0)
-            elif row[2] == "1":
+            elif row[2] == "r":
                 docs.append(row[1])
                 labels.append(1)
+            elif row[2] == "c":
+                docs.append(row[1])
+                labels.append(2)
 
     docs = np.array(docs)
     labels = np.array(labels)
