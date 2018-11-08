@@ -42,7 +42,6 @@ def load_data():
     return docs, labels
 
 def main():
-    print("data loading")
     docs, labels = load_data()
 
     train_split = int(train_pct*(len(docs)))
@@ -65,8 +64,7 @@ def main():
 
     # print("Best score: " + gs_clf.best_score_)
     # print(gs_clf.best_params_)
-    # quit()
-    print("training...")
+    
     clf.fit(train_data, train_labels)
 
     predicted = clf.predict(test_data)
