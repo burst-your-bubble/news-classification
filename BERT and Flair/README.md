@@ -18,3 +18,5 @@ python run_classifier.py \
 Flair is another NLP library and to run flair, first download the train,test,eval dataset from here:https://drive.google.com/open?id=1m_MuXgPPc2JRTMLPQl-ISSJL-vtHjCAl
 To run flair classification, please run flairTest.py (Using Bert word embedding may cause out of memory issue).
 
+Code heavily borrowed from https://github.com/Socialbird-AILab/BERT-Classification-Tutorial and https://towardsdatascience.com/text-classification-with-state-of-the-art-nlp-library-flair-b541d7add21f
+
